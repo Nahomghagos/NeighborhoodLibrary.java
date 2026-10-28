@@ -34,6 +34,16 @@ public class Book {
         return checkedOutTo;
     }
 
+    public void checkOut(String name) {
+        this.isCheckedOut = true;
+        this.checkedOutTo = name;
+    }
+
+    public void checkIn() {
+        this.isCheckedOut = false;
+        this.checkedOutTo = "";
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -43,13 +53,6 @@ public class Book {
                 ", isCheckedOut=" + isCheckedOut +
                 ", checkedOutTo='" + checkedOutTo + '\'' +
                 '}';
-    }public static void showCheckedOutBooks() {
-        for (Book b : NeighborhoodLibrary.book) {
-            if (b != null && b.isCheckedOut()) {
-                System.out.println(b.getId() + " | " + b.getIsbn() + " | " + b.getTitle()
-                        + " | Checked out to: " + b.getCheckedOutTo());
-            }
-        }
     }
 
 }

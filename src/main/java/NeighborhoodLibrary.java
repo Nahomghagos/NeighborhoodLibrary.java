@@ -59,8 +59,9 @@ public class NeighborhoodLibrary {
 
         int choice = myScanner.nextInt();
         myScanner.nextLine();
+        String x = myScanner.nextLine();
 
-        if (choice == 0) {
+        if (x.equalsIgnoreCase("x")) {
             return;
         }
 
@@ -111,7 +112,7 @@ public class NeighborhoodLibrary {
                     b.checkIn();
                     System.out.println("Book checked in successfully.");
                 } else {
-                    System.out.println("That book is not checked out.");
+                    System.out.println("That book is still available.");
                 }
                 return;
             }

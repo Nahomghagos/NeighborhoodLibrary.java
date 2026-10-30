@@ -54,8 +54,7 @@ public class NeighborhoodLibrary {
             }
         }
 
-        System.out.println("Enter the Id of the book you want to check out");
-        System.out.println("Or enter 0 to go back to the home screen");
+        System.out.println("Enter the Id of the book you want to check out or x if you want to go back");
 
         int choice = myScanner.nextInt();
         myScanner.nextLine();
@@ -92,7 +91,6 @@ public class NeighborhoodLibrary {
         }
 
         System.out.println("Enter C to check in a book");
-        System.out.println("Enter X to go back to the home screen");
 
         String choice = myScanner.nextLine();
 
